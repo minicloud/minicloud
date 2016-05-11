@@ -1,0 +1,9 @@
+{
+    "name": "file-api",
+    "method": "get,post",
+    "routes": {
+        "/api/v1/doc/cover": "cover",
+        "/api/v1/doc/pdf": "pdf",
+        "/api/v1/doc/convert": "convert"
+    }
+}

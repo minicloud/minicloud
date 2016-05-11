@@ -1,0 +1,7 @@
+{
+    "name": "file-api",
+    "method": "get,post",
+    "routes": { 
+    	"/api/v1/img/thumbnail": "thumbnail"
+    }
+}

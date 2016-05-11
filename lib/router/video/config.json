@@ -1,0 +1,9 @@
+{
+    "name": "file-api",
+    "method": "get,post",
+    "routes": {
+        "/api/v1/video/cover": "cover",
+        "/api/v1/video/content": "content",
+        "/api/v1/video/convert": "convert"
+    }
+}

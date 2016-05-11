@@ -1,0 +1,7 @@
+{
+    "name": "config-api",
+    "signature": false,
+    "routes": {
+        "/api/v1/node/active": "active"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "name": "file-api",
+    "method": "post",
+    "routes": {
+        "/api/v1/file/upload": "upload"
+    }
+}
