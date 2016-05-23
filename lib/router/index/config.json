@@ -1,0 +1,8 @@
+{
+    "name": "status-api",
+    "method": "get,post",
+    "signature": false,
+    "routes": {
+        "/": "hello"
+    }
+}

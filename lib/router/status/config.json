@@ -1,8 +1,14 @@
 {
     "name": "status-api",
+    "range": "127.0.0.1",
     "method": "get,post",
     "signature": false,
     "routes": {
-        "/": "hello"
+        "/api/v1/status/network": "network",
+        "/api/v1/status/active": "active",
+        "/api/v1/status/version": "version",
+        "/api/v1/status/plugin": "plugin",
+        "/api/v1/status/disk": "disk",
+        "/api/v1/status/folder": "folder"
     }
 }
