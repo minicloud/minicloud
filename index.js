@@ -17,6 +17,6 @@ try{
 	    https.createServer(options, app.callback()).listen(global.config.port)
 	})()
 }catch(error){
-	console.log(`Caught exception: ${err}`)
-    console.log(`Caught exception: ${err.stack}`)
+	console.log(`Caught exception: ${error}`)
+    console.log(`Caught exception: ${error.stack}`)
 }
