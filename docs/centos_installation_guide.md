@@ -55,22 +55,22 @@ __Note__:If centos system is 32-bit, please download nodejs 32-bit installation 
 
 ```bash
 
-wget https://nodejs.org/dist/v5.10.1/node-v5.10.1-linux-x64.tar.xz
-xz -d node-v5.10.1-linux-x64.tar.xz
-tar -xf node-v5.10.1-linux-x64.tar
+wget 'https://nodejs.org/dist/v6.2.1/node-v6.2.1-linux-x64.tar.xz'
+xz -d node-v6.2.1-linux-x64.tar.xz
+tar -xf node-v6.2.1-linux-x64.tar
 mkdir /usr/local/minicloud
-mv node-v5.10.1-linux-x64 /usr/local/minicloud
-rm -rf node-v5.10.1-linux-x64.tar
+mv node-v6.2.1-linux-x64 /usr/local/minicloud
+rm -rf node-v6.2.1-linux-x64.tar
 ```
 
 # Installation minicloud
 
 ```bash
 cd /usr/local/minicloud
-wget https://github.com/jimtang9527/minicloud/archive/master.zip
+wget 'https://github.com/minicloud/minicloud/archive/master.zip'
 unzip master.zip
 cd minicloud-master
-/usr/local/minicloud/node-v5.10.1-linux-x64/bin/npm install
+/usr/local/minicloud/node-v6.2.1-linux-x64/bin/npm install
 rm -rf /usr/local/minicloud/master.zip
 ```
 
@@ -81,7 +81,7 @@ __Note__:minicloud rely on the default port 6081.Please configure the firewall m
 # Run minicloud
 ```bash
 cd /usr/local/minicloud/minicloud-master/
-/usr/local/minicloud/node-v5.10.1-linux-x64/bin/node ./index.js &
+/usr/local/minicloud/node-v6.2.1-linux-x64/bin/node ./index.js &
 ```
 
 # Verify
