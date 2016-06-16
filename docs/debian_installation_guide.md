@@ -29,17 +29,19 @@ apt-get install -y ghostscript
 
 # Installation video online play dependent libraries
 ```bash
-wget https://raw.githubusercontent.com/minicloud/minicloud/master/patch/linux/last_x264.tar.bz2
-tar jxvf last_x264.tar.bz2
-cd x264-snapshot-20160413-2245
+wget 'http://download.videolan.org/pub/x264/snapshots/last_x264.tar.bz2'
+tar xjvf last_x264.tar.bz2 
+cd x264-snapshot-20160613-2245 #（注：这里需要注意目录名称，可能与教程不一致）
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 ./configure  --disable-asm --enable-static --enable-shared 
 make
 make install
 ldconfig
-
-wget https://github.com/FFmpeg/FFmpeg/archive/master.zip
+wget 'https://github.com/FFmpeg/FFmpeg/archive/master.zip'
 unzip master.zip
 cd FFmpeg-master
+echo "/usr/local/lib" >> /etc/ld.so.conf
+ldconfig
 ./configure --disable-yasm --enable-gpl --enable-libx264
 make
 make install
@@ -53,22 +55,23 @@ rm master.zip -rf
 __Note__:If debian system is 32-bit, please download nodejs 32-bit installation package
 
 ```bash
-wget https://nodejs.org/dist/v5.10.1/node-v5.10.1-linux-x64.tar.xz
-xz -d node-v5.10.1-linux-x64.tar.xz
-tar -xf node-v5.10.1-linux-x64.tar
+wget 'https://nodejs.org/dist/v6.2.1/node-v6.2.1-linux-x64.tar.xz'
+xz -d node-v6.2.1-linux-x64.tar.xz
+tar -xf node-v6.2.1-linux-x64.tar
 mkdir /usr/local/minicloud
-mv node-v5.10.1-linux-x64 /usr/local/minicloud
-rm -rf node-v5.10.1-linux-x64.tar
+mv node-v6.2.1-linux-x64 /usr/local/minicloud
+rm -rf node-v6.2.1-linux-x64.tar
+ln -s /usr/local/minicloud/node-v6.2.1-linux-x64/bin/node /usr/bin/node
 ```
 
 # Installation minicloud
 
 ```bash
 cd /usr/local/minicloud
-wget https://github.com/jimtang9527/minicloud/archive/master.zip
+wget 'https://github.com/minicloud/minicloud/archive/master.zip'
 unzip master.zip
 cd minicloud-master
-/usr/local/minicloud/node-v5.10.1-linux-x64/bin/npm install
+/usr/local/minicloud/node-v6.2.1-linux-x64/bin/npm install
 rm -rf /usr/local/minicloud/master.zip
 ```
 
@@ -79,7 +82,7 @@ __Note__:minicloud rely on the default port 6081.Please configure the firewall m
 # Run minicloud
 ```bash
 cd /usr/local/minicloud/minicloud-master/
-/usr/local/minicloud/node-v5.10.1-linux-x64/bin/node ./index.js &
+/usr/local/minicloud/node-v6.2.1-linux-x64/bin/node ./index.js &
 ```
 
 # Verify
