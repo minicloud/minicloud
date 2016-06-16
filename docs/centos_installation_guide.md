@@ -11,25 +11,25 @@ The following describes how to install minicloud in centos.support centos 32bit 
 we tested through the CentOS 7 64bit.
 
 
-# Basic installation dependent
+# Install Basic dependence
 ```bash
 yum -y install wget 
 yum -y install gcc-c++
 yum -y install xz 
 ```
-# Dependent libraries installation image thumbnail
+# Install Image thumbnail dependent libraries
 
 ```bash
 yum -y install ImageMagick ImageMagick-perl
 ```
 
-# Installation documentation online Browsing dependent libraries
+# Install Documentation online browsing dependent libraries
 ```bash
 yum install -y libreoffice-headless libreoffice-writer libreoffice-impress libreoffice-calc libreoffice-langpack-zh-Hans
 yum install -y poppler-utils ghostscript
 ```
 
-# Installation video online play dependent libraries
+# Install Video online play dependent libraries
 ```bash
 wget 'http://download.videolan.org/pub/x264/snapshots/last_x264.tar.bz2'
 tar xjvf last_x264.tar.bz2 
@@ -52,7 +52,7 @@ rm FFmpeg-master -rf
 rm master.zip -rf
 ```
 
-# Installation Nodejs 
+# Install Nodejs
 
 __Note__:If centos system is 32-bit, please download nodejs 32-bit installation package
 
@@ -67,7 +67,7 @@ rm -rf node-v6.2.1-linux-x64.tar
 ln -s /usr/local/minicloud/node-v6.2.1-linux-x64/bin/node /usr/bin/node
 ```
 
-# Installation minicloud
+# Install minicloud
 
 ```bash
 cd /usr/local/minicloud
