@@ -33,7 +33,7 @@ yum install -y poppler-utils ghostscript
 ```bash
 wget 'http://download.videolan.org/pub/x264/snapshots/last_x264.tar.bz2'
 tar xjvf last_x264.tar.bz2 
-cd x264-snapshot-20160613-2245 #（注：这里需要注意目录名称，可能与教程不一致）
+cd x264-snapshot-20160613-2245 #（warning：the directory name may not same as this guide）
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 ./configure  --disable-asm --enable-static --enable-shared 
 make
