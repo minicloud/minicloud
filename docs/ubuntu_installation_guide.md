@@ -15,19 +15,19 @@ we tested through the ubuntu server 14.04 64bit.
 ```bash 
 sudo apt-get install -y  unzip
 ```
-# Install image thumbnail dependent libraries 
+# Install Image thumbnail dependent libraries 
 
 ```bash
 sudo apt-get install imagemagick --fix-missing -y
 ```
 
-# Install documentation online browsing dependent libraries
+# Install Documentation online browsing dependent libraries
 ```bash 
 sudo apt-get install -y libreoffice libreoffice-l10n-zh-cn
 sudo apt-get install -y ghostscript 
 ```
 
-# Install video online play dependent libraries
+# Install Video online play dependent libraries
 ```bash
 wget 'http://download.videolan.org/pub/x264/snapshots/last_x264.tar.bz2'
 tar xjvf last_x264.tar.bz2 
