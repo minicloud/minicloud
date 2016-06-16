@@ -90,7 +90,7 @@ cd /usr/local/minicloud/minicloud-master/
 
 # Verify
 
-In the browser to access http://xxx:6081, confirm the contents of the output is correct. xxx is the ip address of the server.
+In the browser to access https://xxx:6081, confirm the contents of the output is correct. xxx is the ip address of the server.
 
 # Other
 
