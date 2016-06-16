@@ -11,23 +11,23 @@ The following describes how to install minicloud in ubuntu.
 we tested through the ubuntu server 14.04 64bit.
 
 
-# Basic installation dependent
+# Install Basic dependence
 ```bash 
 sudo apt-get install -y  unzip
 ```
-# Dependent libraries installation image thumbnail
+# Install image thumbnail dependent libraries 
 
 ```bash
 sudo apt-get install imagemagick --fix-missing -y
 ```
 
-# Installation documentation online Browsing dependent libraries
+# Install documentation online browsing dependent libraries
 ```bash 
 sudo apt-get install -y libreoffice libreoffice-l10n-zh-cn
 sudo apt-get install -y ghostscript 
 ```
 
-# Installation video online play dependent libraries
+# Install video online play dependent libraries
 ```bash
 wget 'http://download.videolan.org/pub/x264/snapshots/last_x264.tar.bz2'
 tar xjvf last_x264.tar.bz2 
@@ -50,7 +50,7 @@ rm FFmpeg-master -rf
 rm master.zip -rf
 ```
 
-# Installation Nodejs 
+# Install Nodejs 
 
 __Note__:If ubuntu system is 32-bit, please download nodejs 32-bit installation package
 
@@ -64,7 +64,7 @@ rm -rf node-v6.2.1-linux-x64.tar
 ln -s /usr/local/minicloud/node-v6.2.1-linux-x64/bin/node /usr/bin/node
 ```
 
-# Installation minicloud
+# Install minicloud
 
 ```bash
 cd /usr/local/minicloud
@@ -75,7 +75,7 @@ cd minicloud-master
 rm -rf /usr/local/minicloud/master.zip
 ```
 
-# Firewall open port
+# Open firewall port
 
 __Note__:minicloud rely on the default port 6081.Please configure the firewall manually.
 
