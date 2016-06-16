@@ -11,23 +11,23 @@ The following describes how to install minicloud in ubuntu.
 we tested through the debian 7.5 64bit.
 
 
-# Basic installation dependent
+# Install Basic dependence
 ```bash 
 apt-get install -y  unzip
 ```
-# Dependent libraries installation image thumbnail
+# Install Image thumbnail dependent libraries
 
 ```bash
 apt-get install imagemagick --fix-missing -y
 ```
 
-# Installation documentation online Browsing dependent libraries
+# Install Documentation online browsing dependent libraries
 ```bash 
 apt-get install -y libreoffice libreoffice-l10n-zh-cn
 apt-get install -y ghostscript 
 ```
 
-# Installation video online play dependent libraries
+# Install Video online play dependent libraries
 ```bash
 wget 'http://download.videolan.org/pub/x264/snapshots/last_x264.tar.bz2'
 tar xjvf last_x264.tar.bz2 
@@ -50,7 +50,7 @@ rm FFmpeg-master -rf
 rm master.zip -rf
 ```
 
-# Installation Nodejs 
+# Install Nodejs
 
 __Note__:If debian system is 32-bit, please download nodejs 32-bit installation package
 
@@ -64,7 +64,7 @@ rm -rf node-v6.2.1-linux-x64.tar
 ln -s /usr/local/minicloud/node-v6.2.1-linux-x64/bin/node /usr/bin/node
 ```
 
-# Installation minicloud
+# Install minicloud
 
 ```bash
 cd /usr/local/minicloud
