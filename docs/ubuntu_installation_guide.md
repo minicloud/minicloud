@@ -11,35 +11,37 @@ The following describes how to install minicloud in ubuntu.
 we tested through the ubuntu server 14.04 64bit.
 
 
-# Basic installation dependent
+# Install Basic dependence
 ```bash 
 sudo apt-get install -y  unzip
 ```
-# Dependent libraries installation image thumbnail
+# Install Image thumbnail dependent libraries 
 
 ```bash
 sudo apt-get install imagemagick --fix-missing -y
 ```
 
-# Installation documentation online Browsing dependent libraries
+# Install Documentation online browsing dependent libraries
 ```bash 
 sudo apt-get install -y libreoffice libreoffice-l10n-zh-cn
 sudo apt-get install -y ghostscript 
 ```
 
-# Installation video online play dependent libraries
+# Install Video online play dependent libraries
 ```bash
-wget https://raw.githubusercontent.com/minicloud/minicloud/master/patch/linux/last_x264.tar.bz2
-tar jxvf last_x264.tar.bz2
-cd x264-snapshot-20160413-2245
+wget 'http://download.videolan.org/pub/x264/snapshots/last_x264.tar.bz2'
+tar xjvf last_x264.tar.bz2 
+cd x264-snapshot-20160613-2245 #（warning：the directory name may not same as this guide）
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 ./configure  --disable-asm --enable-static --enable-shared 
 make
 make install
 ldconfig
-
-wget https://github.com/FFmpeg/FFmpeg/archive/master.zip
+wget 'https://github.com/FFmpeg/FFmpeg/archive/master.zip'
 unzip master.zip
 cd FFmpeg-master
+echo "/usr/local/lib" >> /etc/ld.so.conf
+ldconfig
 ./configure --disable-yasm --enable-gpl --enable-libx264
 make
 make install
@@ -48,43 +50,44 @@ rm FFmpeg-master -rf
 rm master.zip -rf
 ```
 
-# Installation Nodejs 
+# Install Nodejs 
 
 __Note__:If ubuntu system is 32-bit, please download nodejs 32-bit installation package
 
 ```bash
-wget https://nodejs.org/dist/v5.10.1/node-v5.10.1-linux-x64.tar.xz
-xz -d node-v5.10.1-linux-x64.tar.xz
-tar -xf node-v5.10.1-linux-x64.tar
+wget 'https://nodejs.org/dist/v6.2.1/node-v6.2.1-linux-x64.tar.xz'
+xz -d node-v6.2.1-linux-x64.tar.xz
+tar -xf node-v6.2.1-linux-x64.tar
 mkdir /usr/local/minicloud
-mv node-v5.10.1-linux-x64 /usr/local/minicloud
-rm -rf node-v5.10.1-linux-x64.tar
+mv node-v6.2.1-linux-x64 /usr/local/minicloud
+rm -rf node-v6.2.1-linux-x64.tar
+ln -s /usr/local/minicloud/node-v6.2.1-linux-x64/bin/node /usr/bin/node
 ```
 
-# Installation minicloud
+# Install minicloud
 
 ```bash
 cd /usr/local/minicloud
-wget https://github.com/jimtang9527/minicloud/archive/master.zip
+wget 'https://github.com/minicloud/minicloud/archive/master.zip'
 unzip master.zip
 cd minicloud-master
-/usr/local/minicloud/node-v5.10.1-linux-x64/bin/npm install
+/usr/local/minicloud/node-v6.2.1-linux-x64/bin/npm install
 rm -rf /usr/local/minicloud/master.zip
 ```
 
-# Firewall open port
+# Open firewall port
 
 __Note__:minicloud rely on the default port 6081.Please configure the firewall manually.
 
 # Run minicloud
 ```bash
 cd /usr/local/minicloud/minicloud-master/
-/usr/local/minicloud/node-v5.10.1-linux-x64/bin/node ./index.js &
+/usr/local/minicloud/node-v6.2.1-linux-x64/bin/node ./index.js &
 ```
 
 # Verify
 
-In the browser to access http://xxx:6081, confirm the contents of the output is correct. xxx is the ip address of the server.
+In the browser to access https://xxx:6081, confirm the contents of the output is correct. xxx is the ip address of the server.
 
 # Other
 
